@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cont">
+        <h1>details page</h1>
+        <section>
+
+            <p><%=val.typee%></p>
+            <p><%=val.setup%></p>
+            <p><%=val.punchline%></p>
+
+
+            <form action="/update/<%=val.id%>?_method=put" method="POST">
+                <input type="text" name="jokenumber" value="<%=val.jokenumber%>">
+                <input type="text" name="typee" value="<%=val.typee%>">
+                <input type="text" name="setup" value="<%=val.setup%>">
+                <input type="text" name="punchline" value="<%=val.punchline%>">
+                <button>update</button>
+
+            </form>
+
+            <form action="/delete/<%=val.id%>?_method=delete" method="POST">
+                
+                <button>delete</button>
+
+            </form>
+        </section>
+
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

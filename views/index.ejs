@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="cont">
+        <%data.forEach((val,index)=>{%>
+        <section>
+            <h2>JOKE# <%=index+1%></h2>
+            <p><%=val.typee%></p>
+            <p><%=val.setup%></p>
+            <p><%=val.punchline%></p>
+            <form action="/addtolist" method="POST">
+            <input type="text" name="jokenumber" value="<%=val.jokenumber%>">
+            <input type="text" name="typee" value="<%=val.typee%>">
+            <input type="text" name="setup" value="<%=val.setup%>">
+            <input type="text" name="punchline" value="<%=val.punchline%>">
+            <button> add to jokes list</button>
+            
+            
+            </form>
+        </section>
+
+        <%})%>
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>

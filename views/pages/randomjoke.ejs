@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <header>
         <nav>
             <a href="/"><h3>home</h3></a>
@@ -14,29 +14,10 @@
             <a href="/randomjoke"><h3>random joke</h3></a>
         </nav>
     </header>
+    <h1>random joke page</h1>
 
-    <h1>my list page</h1>
-
-    <div id="cont">
-        <%data.forEach((val,index)=>{%>
-        <section>
-            <h2>JOKE# <%=index+1%></h2>
-            <p><%=val.typee%></p>
+    <p><%=val.typee%></p>
             <p><%=val.setup%></p>
             <p><%=val.punchline%></p>
-          <a href="/viewdetails/<%=val.id%>">
-            <button>View-Details</button>
-        </a>
-        </section>
-
-        <%})%>
-
-
-
-
-
-
-
-    </div>
 </body>
 </html>

@@ -22,14 +22,17 @@ app.get('/renderFav',renderFavHandler)
 app.get('/viewdetails/:id',viewdetailsHandler)
 app.put('/update/:id',updateHandler)
 app.delete('/delete/:id',deleteHandler)
+app.get('/randomjoke',randomjokeHandler)
+
+
+
+
+    
+
 
 
 
 //____________________________________________________________________
-
-
-
-
 function homeHandler(req,res){
 let url='https://official-joke-api.appspot.com/jokes/programming/ten'
 superagent.get(url).then(results=>{
@@ -102,8 +105,16 @@ function deleteHandler(req,res){
 
 
 //____________________________________________________________________
-
-
+function randomjokeHandler(req,res){
+    let url='https://official-joke-api.appspot.com/jokes/programming/random'
+superagent.get(url).then(results=>{
+    console.log(results.body)
+    let randomjoke=results.body
+    let myFinalrandom=new JokeCON(randomjoke[0])
+    res.render('pages/randomjoke.ejs',{val:myFinalrandom})
+    })
+    // console.log(myFinalJoke)
+}
 
 
 

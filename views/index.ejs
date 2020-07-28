@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../public/styles.css">
+    <style>
+        body{
+    background-color: rgb(155, 198, 247);
+}
+#cont{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+section{
+    width: 300px;
+    text-align: center;
+    border: 3px solid blue;
+}
+    </style>
 </head>
 
 <body>
@@ -31,10 +47,10 @@
             <p><%=val.setup%></p>
             <p><%=val.punchline%></p>
             <form action="/addtolist" method="POST">
-            <input type="text" name="jokenumber" value="<%=val.jokenumber%>">
-            <input type="text" name="typee" value="<%=val.typee%>">
-            <input type="text" name="setup" value="<%=val.setup%>">
-            <input type="text" name="punchline" value="<%=val.punchline%>">
+            <input type="text" name="jokenumber" value="<%=val.jokenumber%>" style="display: none;">
+            <input type="text" name="typee" value="<%=val.typee%>" style="display: none;">
+            <input type="text" name="setup" value="<%=val.setup%>" style="display: none;">
+            <input type="text" name="punchline" value="<%=val.punchline%>" style="display: none;">
             <button> add to jokes list</button>
             
             

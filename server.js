@@ -13,6 +13,7 @@ const client = new pg.Client(process.env.DATABASE_URL)
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use('/public', express('public'))
+// app.use(express('./public'))
 app.use(methodOverride('_method'))
 //____________________________________________________________________
 app.set('view engine', 'ejs')

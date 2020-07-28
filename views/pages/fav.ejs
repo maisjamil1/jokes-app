@@ -18,18 +18,25 @@
     <h1>my list page</h1>
 
     <div id="cont">
-        <%data.forEach((val,index)=>{%>
-        <section>
-            <h2>JOKE# <%=index+1%></h2>
-            <p><%=val.typee%></p>
-            <p><%=val.setup%></p>
-            <p><%=val.punchline%></p>
-          <a href="/viewdetails/<%=val.id%>">
-            <button>View-Details</button>
-        </a>
-        </section>
+        <%if(data.length===0){%>
+            <section><p>no available jokes :( </p></section>
+            <%}else{%>
 
-        <%})%>
+                <%data.forEach((val,index)=>{%>
+                    <section>
+                        <h2>JOKE# <%=index+1%></h2>
+                        <p><%=val.typee%></p>
+                        <p><%=val.setup%></p>
+                        <p><%=val.punchline%></p>
+                      <a href="/viewdetails/<%=val.id%>">
+                        <button>View-Details</button>
+                    </a>
+                    </section>
+            
+                    <%})%>
+
+                <%}%>
+       
 
 
 
